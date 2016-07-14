@@ -1,3 +1,15 @@
+  <div class="container-inner inner-default clearfix">
+    <% items.each do |item| %>
+      <div class="item-box">
+        <%= render 'items/item_img' , item: item %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+
+<!--前のコード
 <div class="container">
   <div class="container-inner inner-default clearfix">
     <% items.each do |item| %>
@@ -5,9 +17,9 @@
         <div class="image">
           <div class="img-wrap">
             <% if item.large_image.present? %>
-              <%= image_tag(item.large_image , alt: item.title) %>
+               <%= render 'items/item_img' , item: item %>
             <% else %>
-              <%= image_tag("no-image.png" , alt: item.title) %>
+               <%= render 'items/item_img' , item: item %>
             <% end %>
           </div>
         </div>
@@ -21,3 +33,4 @@
     <% end %>
   </div>
 </div>
+-->
